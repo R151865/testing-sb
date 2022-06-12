@@ -1,20 +1,4 @@
-GET http://localhost:5000/heroku
+GET http://localhost:5000/
 
 
 ###
-
-
-GET http://localhost:5000/contacts
-
-
-###
-GET http://localhost:5000/contacts/2/
-
-
-###
-POST http://localhost:5000/contacts/2/
-Content-Type: application/json
-
-{
-    "message": "heyy ra mawaaa"
-}
