@@ -3,7 +3,7 @@ const sqlite = require("sqlite");
 const sqlite3 = require("sqlite3");
 const path = require("path");
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Pusher = require("pusher");
 
@@ -164,11 +164,11 @@ app.post("/users/new", async (req, res) => {
     return res.status(400).send({ message: "Username already exists" });
   }
 
-  const hashedPassword = await bcrypt.hash(password, 10);
+  //   const hashedPassword = await bcrypt.hash(password, 10);
   const createUserQuery = `
           INSERT INTO user (name, profile, username, password)
           VALUES
-              ('${name}', '${profile}', '${username}', '${hashedPassword}')
+              ('${name}', '${profile}', '${username}', '${password}')
           `;
   await db.run(createUserQuery);
 
@@ -187,7 +187,9 @@ app.post("/login", async (request, response) => {
     return response.status(400).send({ message: "Invalid credentials" });
   }
 
-  const isPasswordMatched = await bcrypt.compare(password, dbUser.password);
+  //   const isPasswordMatched = await bcrypt.compare(password, dbUser.password);
+
+  const isPasswordMatched = password == dbUser.password;
 
   if (isPasswordMatched) {
     const payLoad = dbUser;

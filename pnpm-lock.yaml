@@ -1,5 +1,4 @@
 dependencies:
-  bcrypt: 5.0.1
   cors: 2.8.5
   express: 4.18.1
   js-cookie: 3.0.1
@@ -179,16 +178,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
-  /bcrypt/5.0.1:
-    dependencies:
-      '@mapbox/node-pre-gyp': 1.0.9
-      node-addon-api: 3.2.1
-    dev: false
-    engines:
-      node: '>= 10.0.0'
-    requiresBuild: true
-    resolution:
-      integrity: sha512-9BTgmrhZM2t1bNuDtrtIMVSmmxZBrJ71n8Wg+YgdjHuIWYF7SjjmCPZFB+/5i/o/PIeRpwVJR3P+NrpIItUjqw==
   /binary-extensions/2.2.0:
     dev: false
     engines:
@@ -1321,10 +1310,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
-  /node-addon-api/3.2.1:
-    dev: false
-    resolution:
-      integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==
   /node-addon-api/4.3.0:
     dev: false
     resolution:
@@ -2065,7 +2050,6 @@ packages:
     resolution:
       integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 specifiers:
-  bcrypt: ^5.0.1
   cors: ^2.8.5
   express: ^4.18.1
   js-cookie: ^3.0.1
